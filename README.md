@@ -2,9 +2,16 @@
 
 Copy & paste ready hooks I frequently use in React projects
 
+## Released Packages
+
+- [Framer Motion Hooks (matthiaaas/framer-motion-hooks)](https://github.com/matthiaaas/framer-motion-hooks)
+- [Electron Context Menu (transflow/use-electron-context-menu)](https://github.com/transflow/use-electron-context-menu)
+
 ## All Hooks
 
 ### [`useClientPortal`](src/portal)
+
+![Web Badge](https://img.shields.io/badge/-Web-blueviolet)
 
 React DOM Portal on the client side (especially useful for Next.js)
 
@@ -23,6 +30,8 @@ export const Modal = () => {
 ```
 
 ### [`useStack`](src/stack)
+
+![Web Badge](https://img.shields.io/badge/-Web-blueviolet)
 
 Focus & modal management functions
 

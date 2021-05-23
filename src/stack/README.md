@@ -1,5 +1,7 @@
 # `useStack`
 
+![Web Badge](https://img.shields.io/badge/-Web-blueviolet)
+
 Focus & modal management functions
 
 ```tsx
