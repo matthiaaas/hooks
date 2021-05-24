@@ -49,7 +49,7 @@ export const Modal = () => {
 }
 ```
 
-## API
+#### API
 
 ```ts
 const stack = useStack()
@@ -107,7 +107,7 @@ export const Settings = () => {
 }
 ```
 
-## API
+#### API
 
 ```ts
 const [state, setState] = useLocalStorage(key, defaultState, sync)

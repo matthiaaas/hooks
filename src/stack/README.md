@@ -17,3 +17,14 @@ export const Modal = () => {
   )
 }
 ```
+
+## API
+
+```ts
+const stack = useStack()
+
+stack.addFocus(key)
+stack.hasFocus(key)
+stack.hasSubFocus(key)
+stack.removeFocus(key)
+```
