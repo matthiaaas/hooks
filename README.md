@@ -49,6 +49,17 @@ export const Modal = () => {
 }
 ```
 
+## API
+
+```ts
+const stack = useStack()
+
+stack.addFocus(key)
+stack.hasFocus(key)
+stack.hasSubFocus(key)
+stack.removeFocus(key)
+```
+
 ### [`useIpcRenderer`](src/ipcRenderer)
 
 ![Electron Badge](https://img.shields.io/badge/-Electron-turquoise)
@@ -65,4 +76,39 @@ export const Component = () => {
     [user] // optional React state deps
   )
 }
+```
+
+### [`useLocalStorage`](src/storage)
+
+![Web Badge](https://img.shields.io/badge/-Web-blueviolet)
+
+React state that automatically syncs with localStorage
+
+```tsx
+const defaultSettings = {
+  toggle: false
+}
+
+export const Settings = () => {
+  const [settings, setSettings] = useLocalStorage(
+    "settings",
+    defaultSettings,
+    true
+  )
+
+  const handleToggle = () => {
+    setSettings(settings => ({
+      ...settings,
+      toggle: !settings.toggle
+    }))
+  }
+
+  return <button onClick={handleToggle}>Toggle</button>
+}
+```
+
+## API
+
+```ts
+const [state, setState] = useLocalStorage(key, defaultState, sync)
 ```
