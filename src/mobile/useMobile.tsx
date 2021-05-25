@@ -21,6 +21,7 @@ const useMobile = (options: IOptions = { breakpoint: 580 }) => {
     if (options.userAgent)
       return setMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent))
 
+    handleResize()
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
   }, [])
