@@ -49,6 +49,12 @@ const useRangePicker = (options: IOptions = defaultOptions) => {
     }
   }, [start, end])
 
+  const handleClear = useCallback(() => {
+    setStart(null)
+    setEnd(null)
+    setPotentialEnd(null)
+  }, [])
+
   const handleIs = useCallback(
     (day: Moment, type: keyof isTypes) => {
       switch (type) {
@@ -101,7 +107,8 @@ const useRangePicker = (options: IOptions = defaultOptions) => {
     get: handleGet,
     select: handleSelect,
     preview: handlePreview,
-    is: handleIs
+    is: handleIs,
+    clear: handleClear
   }
 }
 

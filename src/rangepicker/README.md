@@ -53,6 +53,7 @@ const rangePicker = useRangePicker({
 rangePicker.select(day)
 rangePicker.preview(day)
 rangePicker.is(day, "selected")
+rangePicker.clear()
 rangePicker.months // array of moment months
 rangePicker.days // array[] of moment days
 ```
