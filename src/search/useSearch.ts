@@ -1,7 +1,5 @@
 import { ChangeEvent, useEffect, useState } from "react"
 
-let timeout: NodeJS.Timeout = null
-
 const useSearch = <T>(
   collection: T[],
   filterRule: (item: T, term: string) => boolean,
@@ -24,7 +22,7 @@ const useSearch = <T>(
     const applySearch = () =>
       setResults(collection.filter(item => filterRule(item, term)))
 
-    timeout = setTimeout(applySearch, cooldown)
+    let timeout = setTimeout(applySearch, cooldown)
     return () => clearTimeout(timeout)
   }, [term, collection])
 
